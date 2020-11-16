@@ -1,0 +1,15 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "\"Nodemailer Demo\"",
+  "main": "mailedIt.js",
+  "dependencies": {
+    "nodemailer": "^6.4.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VISHNU KS",
+  "license": "ISC"
+}
