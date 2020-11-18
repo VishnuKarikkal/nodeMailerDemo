@@ -9,21 +9,19 @@ async function main() {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     service: "gmail",
-    
-    //secure: false, // true for 465, false for other ports
     auth: {
       user: '', //  username
-      pass: '', //  password
-    },
+      pass: '' //  password
+    }
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: `"NodeJs 👻" <username>`, // sender address
-    to: "sajanvishnu0@gmail.com", // list of receivers
+    from: '', // sender address
+    to: '', // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    html: "<b>Hello world?</b>" // html body
   });
 
   console.log("Message sent: %s", info.messageId);
@@ -35,4 +33,6 @@ async function main() {
 }
 
 console.log("Sending!!!")
-main().catch(console.error);
+main()
+.then(  e=>{  console.log("sent!")  } )
+.catch( console.error );
